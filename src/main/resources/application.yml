@@ -1,0 +1,20 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: leader-election
+  redis:
+    host: "127.0.0.1"
+    port: 6379
+    password: "password"
+    database: 10
+    timeout: "5s"
+    jedis:
+      pool:
+        max-active: 10
+        max-idle: 4
+        max-wait: "10s"
+        min-idle: 2
+    repositories:
+      enabled: false
+
